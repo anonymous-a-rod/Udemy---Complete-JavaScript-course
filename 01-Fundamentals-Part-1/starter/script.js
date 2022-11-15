@@ -296,7 +296,6 @@ if(height) {
     console.log('Height is UNDEFINED')
 }
 
-*/
 
 const age = "18"; 
 if(age === 18) console.log("Exactly 18 years old");
@@ -325,3 +324,65 @@ if(favoriteNumber != 23){
 
 // this Boolean expression will evaluate as true because type coercion with the loose equality operator.
 // or wrap the prompt in Number(), and use the strict equality operator. 
+
+
+
+
+let dolphinsScores = [196, 108, 89, 77, 200, 132, 121];
+
+let koalasScores = [88, 125, 110];
+
+
+function averageScore(scores){
+let total = 0;    
+for(let i=0; i<scores.length; i++){
+    console.log(scores[i]) 
+    total += scores[i]; 
+}
+return total/scores.length;
+}
+
+let dolphinsAverage = averageScore(dolphinsScores);
+let koalasAverage = averageScore(koalasScores);
+
+console.log(dolphinsAverage);
+console.log(koalasAverage);
+
+if ((dolphinsAverage && koalasAverage) < 100){
+    console.log("No Winner!")
+} else if (dolphinsAverage > koalasAverage && dolphinsAverage > 100){
+    console.log("Dolphins win! 😁")
+} else if (dolphinsAverage < koalasAverage && koalasAverage > 100){
+    console.log("Koalas win!")
+} else if (((dolphinsAverage && koalasAverage) > 100) && dolphinsAverage === koalasAverage){
+    console.log("It's a draw!")
+}
+
+*/
+
+// Switch Statement!!!!
+
+const day = 'saturday';
+ 
+switch(day){
+    case 'monday': // day == 'monday'
+        console.log('Plan course strucutre');
+        console.log('Go to coding meet up');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory video')
+        break;
+    case 'wednesday':
+    case 'thursday':
+    case 'friday':
+        console.log('Work hard');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend');
+        break;
+    default:
+        console.log('not a valid day');
+        break;
+}
+
