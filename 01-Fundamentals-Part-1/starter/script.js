@@ -358,7 +358,7 @@ if ((dolphinsAverage && koalasAverage) < 100){
     console.log("It's a draw!")
 }
 
-*/
+
 
 // Switch Statement!!!!
 
@@ -386,3 +386,31 @@ switch(day){
         break;
 }
 
+
+
+// conditional operator 
+
+let age = 23;
+
+age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water💦') ; 
+// ternary operator -> 3 parts. Condition, if, else
+
+const drink = age >= 18 ? 'wine 🍷' : 'water💦' ; 
+console.log(drink);
+
+let drink2;
+if(age >= 18){
+    drink2 = 'wine 🍷';
+} else {
+    drink2 = 'water💦';
+}
+console.log(drink2)
+
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water💦'}`);
+
+*/
+
+const bill = 275
+const tip = (bill >= 50 && bill <= 300)? bill*.15 : bill*0.2;
+const total = bill+tip;
+console.log(total);
