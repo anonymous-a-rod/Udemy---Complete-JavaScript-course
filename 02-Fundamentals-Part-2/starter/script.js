@@ -360,7 +360,58 @@ for(let rep=1; rep<=10; rep++){
     console.log(`Lfting weights rep ${rep} 🏋️`)
 }
 
-*/
+const aaron = [
+    'Aaron',
+    'Scott',
+    'Venema',
+    2037-1994,
+    'student',
+    ['Austin', 'Nate', 'Joel']
+]
+
+let types = [];
+let types2 = [];
+for(let i=0; i<aaron.length; i++){
+    console.log(aaron[i], typeof aaron[i]);
+    types[i] = (typeof aaron[i]);
+
+    types2.push(typeof aaron[i])
+}
+
+console.log(types);
+console.log(types2);
+
+
+
+const birthYear = [1991, 2007, 1969, 2020];
+const ages = [];
+const year = 2023;
+
+for(let i=0; i<birthYear.length; i++){
+    ages[i] = year - birthYear[i];
+}
+
+console.log(ages);
+
+
+types = [];
+
+for(let i=0; i<aaron.length; i++){
+    if(typeof aaron[i] === 'string') continue;
+
+    console.log(aaron[i], typeof aaron[i]);
+
+    types[i] = (typeof aaron[i]);
+
+}
+
+console.log(types);
+
+
+// continue ends the current iteration 
+// break ends the entire loop 
+
+
 
 const aaron = [
     'Aaron',
@@ -371,6 +422,76 @@ const aaron = [
     ['Austin', 'Nate', 'Joel']
 ]
 
-for(let i=0; i<aaron.length; i++){
-    console.log(aaron[i]);
+for(let i = aaron.length-1; i>=0; i--){
+    console.log(i, aaron[i]);
 }
+
+
+for (let exercise = 1; exercise < 4; exercise++){
+    console.log(`------Starting Exercise ${exercise}------`)
+    for(let rep = 1; rep<=5; rep++){
+        console.log(`Lifting weight reptition ${rep} 🏋️`)
+    }
+}
+
+
+
+let rep = 1;
+while (rep < 10){
+    console.log(rep, "hello")
+    rep++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice} 🎲`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
+
+*/
+
+
+bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+tip = [];
+tipTotal = [];
+total = [];
+
+function calcBill(bill){
+    if (bill > 50 && bill < 300){
+        tip = bill*.15;
+    } else {
+        tip = bill * 0.2;
+    }
+    return tip+bill;
+}
+
+function calcTip(bill){
+    if (bill > 50 && bill < 300){
+        tip = bill*.15;
+    } else {
+        tip = bill * 0.2;
+    }
+    return tip;
+}
+
+for(let i=0; i<bill.length; i++){
+    tipTotal.push(calcTip(bill[i]));
+    total[i] = calcBill(bill[i]);
+}
+
+console.log(total);
+console.log(tipTotal);
+
+
+function calcAverage(bill){
+    let sum = 0;
+    for( let i=0; i<bill.length; i++){
+        sum += bill[i];  
+    }
+    return sum/bill.length;
+}
+
+console.log(calcAverage(total));
+console.log(calcAverage(tipTotal));
